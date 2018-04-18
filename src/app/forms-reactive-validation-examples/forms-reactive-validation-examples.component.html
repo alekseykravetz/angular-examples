@@ -1,0 +1,22 @@
+<div [formGroup]="formGroup">
+  <label for="message-input">Message: </label>
+  <input type="text" id="message-input" name="messageInput" formControlName="messageControl">
+  <span *ngIf="formGroup.controls['messageControl'].invalid && formGroup.controls['messageControl'].touched">
+    Please enter a message
+  </span>
+</div>
+
+
+<h3>
+  Reactive Forms Validation</h3>
+
+<form #f="ngForm">
+  <span *ngIf="f.valid">The Form Is Valid</span>
+  <fieldset #g="ngModelGroup" ngModelGroup="someGroup">
+    <legend>Some Group</legend>
+    <span *ngIf="g.valid">The Model Group Is Valid</span>
+    <input type="text" id="message-input" name="messageInput" #c="ngModel" required [(ngModel)]="message">
+    <span>Message is required.</span>
+    <span *ngIf="g.valid">The Control Is Valid</span>
+  </fieldset>
+</form>

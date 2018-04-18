@@ -1,0 +1,17 @@
+.rotate-anim:hover {
+    transform: rotate(180deg);
+    transition: all 1s;
+    fill: green;
+    color: green;
+}
+
+.parent {
+    display: flex;
+    height: 300px; /* Or whatever */
+  }
+  
+  .child {
+    width: 100px;  /* Or whatever */
+    height: 100px; /* Or whatever */
+    margin: auto;  /* Magic! */
+  }
